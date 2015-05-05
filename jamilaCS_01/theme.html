@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "www.OpenOffice.Org">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body style="margin: 0;">
+
+<table cellspacing="0" cellpadding="0" bgcolor="#ffffff" style="width: 858px;">
+<tr>
+<td rowspan="3" width="50" style="background: url(<{$xoops_imageurl}>images/col.gif);"></td>
+<td width="800" height="170" style="background: url(<{$xoops_imageurl}>images/turkxoops.JPG);">
+
+
+
+	<table cellspacing="0" cellpadding="0">
+
+		<tr>
+	<td style="color: #ffffff; font-weight: bold; vertical-align: middle; padding-left: 10px;">
+	<{if !$xoops_isuser}>
+	<form action="<{$xoops_url}>/user.php" method="post" style="margin: 0px;">
+	
+	<input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+	<input type="hidden" name="op" value="login" />
+	Üye Adý: <input type="text" name="uname" size="14" style="color: #ffffff; font-size: 8pt; border: solid 1px #ffffff;" /><br>
+	Þifreniz: <input type="password" name="pass" size="14" style="color: #ffffff; font-size: 8pt; border: solid 1px #ffffff;" /><br>
+	<input type="submit" value="Giriþ" class ="formButton" style="color: #ffffff; font-size: 8pt; border: solid 1px #ffffff;" /><br>
+	<!-- a href="<{$xoops_url}>/user.php#lost"><img src="<{$xoops_imageurl}>images/pass.gif" alt="Hasabiniz" /></a>
+	<a href="<{$xoops_url}>/register.php"><img src="<{$xoops_imageurl}>images/shin.gif" alt="Üye Olabilirsiniz" /></a -->
+       
+      <a href="<{$xoops_url}>/register.php"><img src="<{$xoops_imageurl}>images/jamila10.jpg" alt="Hesabýnýz" /></a><br>
+      <a href="<{$xoops_url}>/user.php#lost"><img src="<{$xoops_imageurl}>images/jamila11.jpg" alt="Kayýp Þifre" /></a><br>
+      <a href="<{$xoops_url}>/modules/newbb/"><img src="<{$xoops_imageurl}>images/jamila12.jpg" alt="Forumlar" /></a><br>
+      <a href="<{$xoops_url}>/"><img src="<{$xoops_imageurl}>images/jamila13.jpg" alt="DuvarKaðýdý ve Resimler" /></a><br>
+      <a href="<{$xoops_url}>/modules/mydownloads/"><img src="<{$xoops_imageurl}>images/jamila14.jpg" alt="Dosyalar" /></a><br>
+
+
+
+
+	</form>
+
+
+
+
+	<{else}>
+	<a href="<{$xoops_url}>/user.php"><img src="<{$xoops_imageurl}>images/jamila01.jpg" alt="Hesabýnýz" /></a><br>
+	<a href="<{$xoops_url}>/edituser.php"><img src="<{$xoops_imageurl}>images/jamila02.jpg" alt="Bilgileri Düzenle" /></a><br>
+	<a href="<{$xoops_url}>/notifications.php"><img src="<{$xoops_imageurl}>images/jamila03.jpg" alt="Hatýrlatmalar" /></a><br>
+	<a href="<{$xoops_url}>/user.php?op=logout"><img src="<{$xoops_imageurl}>images/jamila04.jpg" alt="Çýkýþ" /></a><br>
+	<a href="<{$xoops_url}>/viewpmsg.php"><img src="<{$xoops_imageurl}>images/jamila05.jpg" alt="Mesaj Kutusu" /></a><br>
+	<{if $xoops_isadmin}>
+	<a href="<{$xoops_url}>/admin.php"><img src="<{$xoops_imageurl}>images/jamila07.jpg" alt="Yönetim" /></a>
+	<{/if}>
+	<{/if}>
+	</td>
+
+
+	</tr>
+		</table>
+
+</td>
+<td rowspan="3" width="8" style="background: url(<{$xoops_imageurl}>images/sh.gif);"></td>
+</tr>
+
+<tr>
+<td>
+
+	<table cellspacing="0" cellpadding="0">
+	<tr>
+	<td width="170" style="border-right:solid 1px #efefef;">
+	<!-- Sag Blok Basi -->
+	<{foreach item=block from=$xoops_lblocks}>
+		<table cellspacing="0" cellpadding="2">
+		<tr>
+		<td class="blockTitle">&nbsp;<{$block.title}></td>
+		</tr>
+		<tr>
+		<td class="blockContent"><{$block.content}></td>
+		</tr>
+		</table>
+	<{/foreach}>
+	<!-- Sag Blok Sonu -->
+	</td>
+	<td style="padding: 0px 5px 0px;" align="center">
+	<!-- ORta Blok Gorunumu basi  -->
+	<{if $xoops_showcblock == 1}>
+
+		<table cellspacing="0">
+		<tr>
+		<td width="100%" colspan="2">
+
+		<!-- Orta Orta Blok Basi -->
+		<{foreach item=block from=$xoops_ccblocks}>
+			<table cellspacing="1" cellpadding="5">
+			<tr> 
+			<td class="blockTitle2">&nbsp;<{$block.title}></td>
+			</tr>
+			<tr>
+			<td class="blockContent"><{$block.content}></td>
+			</tr>
+			</table>
+		<{/foreach}>
+		<!-- Orta ORta Blok Sonu -->
+
+		</td>
+		</tr>
+		<tr>
+		<td width="50%">
+
+		<!-- Orta Sol Blok Baslangici -->
+		<{foreach item=block from=$xoops_clblocks}>
+			<table cellspacing="1" cellpadding="5">
+			<tr> 
+			<td class="blockTitle2">&nbsp;<{$block.title}></td>
+			</tr>
+			<tr>
+			<td class="blockContent"><{$block.content}></td>
+			</tr>
+			</table>
+		<{/foreach}>
+		<!-- Orta Sol BLok Sonu -->
+
+		</td><td width="50%">
+
+		<!-- Orta Sag Blok Baslangici -->
+		<{foreach item=block from=$xoops_crblocks}>
+			<table cellspacing="1" cellpadding="5">
+			<tr> 
+			<td class="blockTitle2">&nbsp;<{$block.title}></td>
+			</tr>
+			<tr>
+			<td class="blockContent"><{$block.content}></td>
+			</tr>
+			</table>
+		<{/foreach}>
+		<!-- Orta Sag Blok Sonu -->
+
+		</td>
+		</tr>
+		</table>
+
+	<{/if}>
+	<!-- Orta Blok Sonu -->
+
+	<div id="content">
+	<{$xoops_contents}>
+	</div>
+	</td>
+
+	<{if $xoops_showrblock == 1}>
+	<td width="170"  style="border-left:solid 1px #efefef;">
+	<!-- Sað Blok Baslangici -->
+	<{foreach item=block from=$xoops_rblocks}>
+		<table cellspacing="0" cellpadding="2">
+		<tr>
+		<td class="blockTitle3">&nbsp;<{$block.title}></td>
+		</tr>
+		<tr>
+		<td class="blockContent"><{$block.content}></td>
+		</tr>
+		</table>
+	<br />
+	<{/foreach}>
+	<!-- Sag Blok Sonu -->
+	<{/if}>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+
+<tr>
+<td height="30" valign="middle" bgcolor="#efefef" align="center"><div style="text-align: center; padding-top: 2px; font-size: 10px"><{$xoops_footer}><br />Copyright 2004 &copy; <a href="http://www.turkxoops.com/" target="_blank">Turkxoops </a>Theme: JamilaCS_01</div></td>
+</tr>
+</table>
+
+</body>
+</html>
